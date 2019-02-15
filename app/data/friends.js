@@ -19,18 +19,18 @@ var clientList = [
 
     {
         "name": "",
-        "photo": "https://.jpg",
+        "photo":"https://via.placeholder.com/300",
         "scores": [
             5,
-            1,
-            4,
-            4,
             5,
-            1,
-            2,
             5,
-            4,
-            1
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
         ]
     },
 

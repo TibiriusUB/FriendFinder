@@ -13,6 +13,8 @@
 // The closest match will be the user with the least amount of difference.
 // Once you've found the current user's most compatible friend, display the result as a modal pop-up.
 
+//consider writeing to the friends.js file to maintain new users 
+
 // The modal should display both the name and picture of the closest match.
 var friends = require("../data/friends");
 
@@ -27,7 +29,7 @@ module.exports = function (app) {
         res.json(false);
     });
 
-// clear function added from UNTI 13-express\16-HotRestaurant as a good idea for quick edit purposes, may be disabled or more securly integrated.
+// clear function added from UNIT: 13-express\16-HotRestaurant as a good idea for quick edit purposes, may be disabled or more securly integrated.
 
   app.post("/api/clear", function(req, res) {
     friends.length = [];
