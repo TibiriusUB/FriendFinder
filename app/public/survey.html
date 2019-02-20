@@ -90,7 +90,7 @@
                     <div class=container>
                         <!--prepend errorcontent here!-->
                         <p id="errmess"></p>
-                        <img id="matchPic" src="/public/images/broken-conceptual-cracked-1906537.jpg" width=100%>
+                        <img id="notepic" src="/public/images/broken-conceptual-cracked-1906537.jpg" width=100%>
                     </div>
                 </div>
             </div>
@@ -438,7 +438,9 @@
         c: "Please enter name and photo link!",
         d: "Please make sure all questions are answered!",
         e: "Uh-oh",
-        f: "Adding to the Mingle!"
+        f: "Adding to the Mingle!",
+        g:"/public/images/broken-conceptual-cracked-1906537.jpg",
+        h:"/public/images/box-cheerful-color-207983.jpg"
     }
 
     //API call for friends list
@@ -463,6 +465,7 @@
         console.log(noterr)
         $("#whoops").text(noterr[0])
         $("#errmess").text(noterr[1])
+        $("#notepic").attr("src",noterr[2])
         $('#catchErr').modal()
     };
 
@@ -494,9 +497,9 @@
     function addNewFriend(newFriend) {
         $.post("api/friends", newFriend, function (data) {
             if (data) {
-                catchNote([erNo.a, erNo.e])
+                catchNote([erNo.a, erNo.e,erNo.g])
             } else {
-                catchNote([erNo.b, erNo.f])
+                catchNote([erNo.b, erNo.f,erNo.h])
             }
 
             $("newName").val("");
@@ -552,7 +555,7 @@
             });
 
         } else {
-            catchNote([erNo.a, erNo.d])
+            catchNote([erNo.a, erNo.d,erNo.g])
         };
     })
 </script>
